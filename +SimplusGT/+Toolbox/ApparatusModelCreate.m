@@ -182,6 +182,70 @@ switch floor(Type/10)
                             Para.f_i_sdq;
                             Para.f_w_m];
         end
+     case 6  % Type 60-65
+        if Type==60
+            Apparatus = SimplusGT.Class.SynchronousMachineFull_SM('ApparatusType',Type);
+        elseif Type == 61
+            Apparatus = SimplusGT.Class.SynchronousMachineFull_SM_GOV('ApparatusType',Type);
+        elseif Type==62
+            Apparatus = SimplusGT.Class.SynchronousMachineFull_SMAVR('ApparatusType',Type);
+        elseif Type == 63
+            Apparatus = SimplusGT.Class.SynchronousMachineFull_SMAVRGOV('ApparatusType',Type);
+        elseif Type==64
+            Apparatus = SimplusGT.Class.SynchronousMachineFull_SMAVRPSS('ApparatusType',Type);
+        elseif Type == 65
+            Apparatus = SimplusGT.Class.SynchronousMachineFull_SMAVRPSSGOV('ApparatusType',Type);
+        end
+        Apparatus.Para = [ Para.X;
+                        Para.R;
+                        Para.Xd; 
+                        Para.Xd1; 
+                        Para.Xd2; 
+                        Para.Td1; 
+                        Para.Td2;
+                        Para.Xq;
+                        Para.Xq1;
+                        Para.Xq2;
+                        Para.Tq1;
+                        Para.Tq2;
+                        Para.H;
+                        Para.D;
+                        %Para.AVRSel;
+                        %Para.PSSSel;
+                        %AVR parameters
+                        Para.TR;
+                        Para.KA;
+                        Para.TA;
+                        Para.VRmax;
+                        Para.VRmin;
+                        Para.KE;
+                        Para.TE;
+                        Para.E1;
+                        Para.SE1;
+                        Para.E2;
+                        Para.SE2;
+                        Para.KF;
+                        Para.TF;
+                        Para.KP;
+                        Para.KI;
+                        Para.KD;
+                        Para.TD;
+                        Para.KPSS;
+                        Para.TW;
+                        Para.T11;
+                        Para.T12;
+                        Para.T21;
+                        Para.T22;
+                        Para.T31;
+                        Para.T32;
+                        Para.VSSmax;
+                        Para.VSSmin;
+                        Para.Rgov;
+                        Para.T1gov;
+                        Para.T2gov;
+                        Para.T3gov;
+                        Para.Dtgov;
+                        ];
     % ### Ac infinite bus
     case 9
         Apparatus = SimplusGT.Class.InfiniteBusAc;
