@@ -19,9 +19,8 @@ ZmValAll = MdDataSave.ZmValAll;
 MdMode = MdDataSave.MdMode;
 ModeSelAll = MdDataSave.ModeSelAll;
 
-Mode_Hz = MdMode(ModeSelAll);
-Mode_Hz = MdMode(ModeSelAll);
 
+Mode_Hz = MdMode(ModeSelAll);
 MdLayer3 = SimplusGT.Modal.MdLayer3( ...
     ResidueAll{1}, ZmValAll{1}, Mode_Hz, ApparatusType, ...
     AppSelect, Para, ApparatusPowerFlow, Ts, ...
