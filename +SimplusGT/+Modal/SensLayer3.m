@@ -35,7 +35,7 @@ for AppCount = 1:length(ApparatusSelL3All)
    
         [~,GmDSS_Cell_New,~,~,~,~,~,~,~] ...    % get the new parameter
         = SimplusGT.Toolbox.ApparatusModelCreate(ApparatusBus{AppSel},ApparatusType{AppSel},...
-                            ApparatusPowerFlow{AppSel},ParaNew,Ts,ListBus,Advance);       
+                            ApparatusPowerFlow{AppSel},ParaNew,Ts,ListBus,Advance);
 
         YmValNew.dd=evalfr(GmDSS_Cell_New(1,1),Mode_rad);
         YmValNew.dq=evalfr(GmDSS_Cell_New(1,2),Mode_rad);
